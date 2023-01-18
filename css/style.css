@@ -1,0 +1,159 @@
+/* =========================
+Start Main Styles
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #FAFAFA;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    margin: auto;
+    width: 85%;
+    padding: 20px;
+}
+
+/* ===================================
+Start Team title and Details
+====================================== */
+
+.team_text {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 50px 0;
+}
+
+.team-title {
+    flex: 1 1 50%;
+}
+
+.team-details {
+    flex: 1 1 50%;
+    padding: 0 30px;
+}
+
+.team-title h3 {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -0.045em;
+    color: #000000;
+}
+
+.team-details-big {
+    display: block;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.team-details-desc {
+    font-style: normal;
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+/* ===================================
+Start Team Cards
+====================================== */
+
+.team_cards {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px 50px;
+}
+
+.team-card {
+    flex: 1 1 calc(100% / 4 - 20px);
+    position: relative;
+}
+
+.team-card-img {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px 0px 0px;
+    margin-bottom: 15px;
+}
+
+.team_cards>div:nth-child(2),
+.team_cards>div:nth-child(5) {
+    margin-top: 150px;
+}
+
+.team-card-job {
+    position: absolute;
+    width: 200px;
+    height: 0;
+    top: 100px;
+    right: -110px;
+    display: block;
+    font-family: 'PT Serif', serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    text-transform: uppercase;
+    transform: rotate(90deg);
+}
+
+.team-card-name {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+}
+
+/* ===================================
+Start Media Quieres and Responsive
+====================================== */
+@media (max-width:991px) {
+    .team-card {
+        flex: 1 1 calc(100% / 2 - 30px);
+    }
+
+    .team_cards>div:nth-child(even) {
+        margin-top: 150px;
+    }
+
+    .team_text {
+        flex-direction: column;
+    }
+
+    .team_text .team-details {
+        padding: 0;
+    }
+
+    .team_cards>div:nth-child(5) {
+        margin-top: 0;
+    }
+}
+
+@media (max-width:575px) {
+    .team-card {
+        flex: 1 1 calc(100% / 1 - 30px);
+    }
+
+    .team_cards>div:nth-child(even) {
+        margin-top: 0;
+    }
+}
